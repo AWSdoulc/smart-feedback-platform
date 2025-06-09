@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: feedback-frontend
-          image: 956126608641.dkr.ecr.us-east-1.amazonaws.com/feedback-frontend:latest
+          image: [ECR Image ID url]
           ports:
             - containerPort: 3000
           imagePullPolicy: Always
