@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: feedback-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: feedback-frontend
+  template:
+    metadata:
+      labels:
+        app: feedback-frontend
+    spec:
+      containers:
+        - name: feedback-frontend
+          image: 956126608641.dkr.ecr.us-east-1.amazonaws.com/feedback-frontend:latest
+          ports:
+            - containerPort: 3000
+          imagePullPolicy: Always
